@@ -7,6 +7,7 @@ public class SaposController extends Thread {
 	int saltoMaximo;
 	int distancia;
 	int sapo;
+	static int posicao = 0;
 
 	public SaposController(int saltoMaximo, int distancia, int sapo) {
 
@@ -39,7 +40,7 @@ public class SaposController extends Thread {
 
 			if (percorrido >= distancia) {
 
-				System.out.println("O sapo " + sapo + " chegou - Posição: " + currentThread().getId());
+				System.out.println("O sapo " + sapo + " chegou - Posição: " + (posicao = posicao + 1));
 				opc = 9;
 
 			} else {
@@ -52,7 +53,5 @@ public class SaposController extends Thread {
 		}
 
 	}
-	
-
 
 }

@@ -18,13 +18,13 @@ public class Main {
 
 		for (int i = 0; i <= 4; i++) {
 
-			SaposController sapo = new SaposController(random.nextInt(11), distancia, random.nextInt(5));
+			SaposController sapo = new SaposController(random.nextInt(11) + 2, distancia, random.nextInt(5));
 			sapo.start();
 
 		}
 
 		scanner.close();
-		
+
 	}
 
 }
